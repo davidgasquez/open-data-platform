@@ -1,0 +1,10 @@
+{
+	"name": "Clickhouse Playground",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "ubuntu",
+	"workspaceFolder": "/workspace",
+	"settings": {},
+	"extensions": [],
+	"remoteUser": "vscode",
+	"features": {}
+}
