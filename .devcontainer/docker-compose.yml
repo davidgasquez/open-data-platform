@@ -5,16 +5,13 @@ services:
       context: .
       dockerfile: Dockerfile
     tty: true
-    depends_on:
-      - clickhouse
+    network_mode: service:clickhouse
     volumes:
       - ..:/workspace:cached
   clickhouse:
     image: "yandex/clickhouse-server:21.1.7"
     volumes:
-      - ./clickhouse:/var/lib/clickhouse
-    ports:
-      - "8123:8123"
+      - ../.clickhouse:/var/lib/clickhouse
     ulimits:
       nofile:
         soft: 262144

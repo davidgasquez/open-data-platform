@@ -4,7 +4,13 @@
 	"service": "ubuntu",
 	"workspaceFolder": "/workspace",
 	"settings": {},
-	"extensions": [],
+	"extensions": [
+		"GitHub.copilot",
+		"eamodio.gitlens"
+	],
+	"forwardPorts": [
+		8123
+	],
 	"remoteUser": "vscode",
 	"features": {}
 }
