@@ -1,2 +1,3 @@
-# clickhouse-playground
-🧰 Tinkering around with ClickHouse
+# Open Source Data Stack Playground
+
+Tinkering around with a bunch of open source data tools.
