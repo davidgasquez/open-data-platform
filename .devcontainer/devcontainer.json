@@ -23,7 +23,8 @@
         "ultram4rine.sqltools-clickhouse-driver"
     ],
     "forwardPorts": [
-        8123
+        8123,
+        3000
     ],
     "remoteUser": "vscode"
 }

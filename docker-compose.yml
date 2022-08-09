@@ -19,3 +19,7 @@ services:
             nofile:
                 soft: 262144
                 hard: 262144
+    metabase:
+        image: metabase/metabase:latest
+        ports:
+            - 3000:3000
