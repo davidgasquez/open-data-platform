@@ -25,5 +25,18 @@ services:
             - 8010:3000
     grafana:
         image: grafana/grafana
+        user: ":"
+        volumes:
+            - ./grafana/:/etc/grafana/provisioning/datasources:rw
+            - .grafana:/var/lib/grafana:rw
         ports:
             - 8020:3000
+        environment:
+            - GF_INSTALL_PLUGINS=grafana-clickhouse-datasource
+            - GF_AUTH_DISABLE_LOGIN_FORM=true
+            - GF_AUTH_ANONYMOUS_ENABLED=true
+            - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    prometheus:
+        image: prom/prometheus
+        ports:
+            - 9090:9090

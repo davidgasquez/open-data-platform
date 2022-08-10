@@ -31,5 +31,6 @@
 *.out
 *.app
 
-# Clickhouse files
+# Service files
 .clickhouse/
+.grafana/
