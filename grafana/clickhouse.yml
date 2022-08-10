@@ -8,3 +8,5 @@ datasources:
       server: clickhouse
       username: default
       tlsSkipVerify: false
+    isDefault: true
+    editable: false
