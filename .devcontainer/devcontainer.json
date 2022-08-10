@@ -10,7 +10,7 @@
                 "previewLimit": 50,
                 "driver": "ClickHouse",
                 "name": "Clickhouse",
-                "server": "localhost",
+                "server": "clickhouse",
                 "database": "default",
                 "username": "default"
             }
@@ -24,8 +24,7 @@
     ],
     "forwardPorts": [
         8123,
-        8010,
-        8020
+        3000
     ],
     "remoteUser": "vscode"
 }
