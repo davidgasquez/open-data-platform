@@ -12,8 +12,10 @@ services:
         ports:
             - 9000:9000
             - 8123:8123
+            - 9363:9363
         volumes:
             - .clickhouse:/var/lib/clickhouse
+            - ./clickhouse/prometheus.xml:/etc/clickhouse-server/config.d/prometheus.xml
         ulimits:
             nofile:
                 soft: 262144
@@ -32,6 +34,8 @@ services:
             - GF_AUTH_ANONYMOUS_ENABLED=true
             - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
     prometheus:
+        volumes:
+            - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
         image: prom/prometheus
         ports:
             - 9090:9090
