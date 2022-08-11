@@ -5,10 +5,11 @@ services:
             context: .
             dockerfile: Dockerfile
         tty: true
+        image: ubuntu
         volumes:
             - .:/workspace:cached
     clickhouse:
-        image: yandex/clickhouse-server:21.3.20.1
+        image: clickhouse/clickhouse-server:22.3.11.12
         ports:
             - 9000:9000
             - 8123:8123

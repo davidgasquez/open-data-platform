@@ -1,4 +1,4 @@
-<yandex>
+<clickhouse>
     <prometheus>
         <endpoint>/metrics</endpoint>
         <port>9363</port>
@@ -7,4 +7,4 @@
         <asynchronous_metrics>true</asynchronous_metrics>
         <status_info>true</status_info>
     </prometheus>
-</yandex>
+</clickhouse>
