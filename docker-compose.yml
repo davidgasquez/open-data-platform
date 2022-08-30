@@ -17,6 +17,7 @@ services:
         volumes:
             - .clickhouse:/var/lib/clickhouse
             - ./clickhouse/prometheus.xml:/etc/clickhouse-server/config.d/prometheus.xml
+            - ./clickhouse/tabix.xml:/etc/clickhouse-server/config.d/tabix.xml
         ulimits:
             nofile:
                 soft: 262144

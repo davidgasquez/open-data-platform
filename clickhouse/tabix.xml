@@ -1,0 +1,3 @@
+<clickhouse>
+    <http_server_default_response><![CDATA[<html ng-app="SMI2"><head><base href="http://beta.tabix.io/"></head><body><div ui-view="" class="content-ui"></div><script src="http://loader.tabix.io/master.js"></script></body></html>]]></http_server_default_response>
+</clickhouse>
