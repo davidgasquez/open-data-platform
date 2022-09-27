@@ -36,8 +36,8 @@ services:
             - GF_AUTH_ANONYMOUS_ENABLED=true
             - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
     prometheus:
+        image: prom/prometheus
         volumes:
             - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-        image: prom/prometheus
         ports:
             - 9090:9090
