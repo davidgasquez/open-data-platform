@@ -34,3 +34,4 @@
 # Service files
 .clickhouse/
 .grafana/
+.minio/
