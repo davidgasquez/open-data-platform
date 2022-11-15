@@ -1,4 +1,3 @@
-# Make default target
 default: dev
 
 build:
@@ -16,3 +15,4 @@ dev: up
 clean: stop
 	@sudo rm -rf .clickhouse/
 	@sudo rm -rf .grafana/
+	@sudo rm -rf .minio/
