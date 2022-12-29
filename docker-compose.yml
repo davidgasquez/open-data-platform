@@ -7,9 +7,10 @@ services:
         tty: true
         image: ubuntu
         volumes:
+            - /var/run/docker.sock:/var/run/docker-host.sock
             - .:/workspace:cached
     clickhouse:
-        image: clickhouse/clickhouse-server:22.10.2
+        image: clickhouse/clickhouse-server:22.12.1
         ports:
             - 9000:9000
             - 8123:8123
@@ -23,7 +24,7 @@ services:
                 soft: 262144
                 hard: 262144
     grafana:
-        image: grafana/grafana:9.2.4
+        image: grafana/grafana:9.3.2
         user: ":"
         volumes:
             - ./grafana/:/etc/grafana/provisioning/datasources:rw
@@ -36,7 +37,7 @@ services:
             - GF_AUTH_ANONYMOUS_ENABLED=true
             - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
     prometheus:
-        image: prom/prometheus:v2.40.1
+        image: prom/prometheus:v2.41.0
         volumes:
             - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
         ports:
