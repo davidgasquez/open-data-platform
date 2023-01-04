@@ -9,10 +9,18 @@ up: build
 stop:
 	@docker-compose stop
 
+.PHONY: minio
+minio:
+	@mc config host add mn http://minio:9020 minio minio123
+
+.PHONY: data
+data:
+	@wget --continue https://datasets.clickhouse.com/hits_compatible/athena_partitioned/hits_1.parquet -O data/hits.parquet
+	@mc cp data/hits.parquet mn/data/hits.parquet
+
 dev: up
 	@docker-compose exec -u vscode -w /workspace ubuntu /bin/bash
 
 clean: stop
-	@sudo rm -rf .clickhouse/
-	@sudo rm -rf .grafana/
+	@sudo rm -rf data/*
 	@sudo rm -rf .minio/

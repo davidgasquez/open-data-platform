@@ -6,27 +6,28 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "sqltools.connections": [
-                    {
-                        "port": 8123,
-                        "previewLimit": 50,
-                        "driver": "ClickHouse",
-                        "name": "Clickhouse",
-                        "server": "clickhouse",
-                        "database": "default",
-                        "username": "default"
-                    }
-                ]
+                "files.associations": {
+                    "*.sql": "jinja-sql"
+                },
+                "dbt.profilesDirOverride": "/workspace/dbt/"
             },
             "extensions": [
-                "mtxr.sqltools",
-                "ultram4rine.sqltools-clickhouse-driver"
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "EditorConfig.EditorConfig",
+                "samuelcolvin.jinjahtml",
+                "redhat.vscode-yaml",
+                "innoverio.vscode-dbt-power-user",
+                "visualstudioexptteam.vscodeintellicode",
+                "bastienboutonnet.vscode-dbt",
+                "dorzey.vscode-sqlfluff"
             ]
         }
     },
     "features": {
         "ghcr.io/stuartleeks/dev-container-features/shell-history:latest": {},
-        "ghcr.io/devcontainers/features/docker-from-docker:1": {}
+        "ghcr.io/devcontainers/features/docker-from-docker:1": {},
+        // "ghcr.io/devcontainers/features/python:1": {}
     },
     "remoteUser": "vscode"
 }

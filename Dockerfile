@@ -1,9 +1,15 @@
-FROM mcr.microsoft.com/vscode/devcontainers/base:jammy
+FROM mcr.microsoft.com/vscode/devcontainers/python:3.10
 
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 8919F6BD2B48D754 && \
-    echo "deb https://packages.clickhouse.com/deb stable main" | sudo tee \
-    /etc/apt/sources.list.d/clickhouse.list
+RUN apt-get update && apt-get -y install --no-install-recommends \
+    build-essential
 
-RUN apt-get update && apt-get -y install --no-install-recommends build-essential python3-dev python3 python3-pip clickhouse-client
+# Install minio mc
+RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc && chmod +x mc && mv mc /usr/local/bin
 
-RUN pip3 install clickhouse-connect dbt-core dbt-clickhouse
+# Install duckdb
+RUN pip3 --disable-pip-version-check --no-cache-dir install \
+    duckdb==0.6.1 dbt-duckdb==1.3.3 dbt-osmosis==0.9.8 \
+    && rm -rf /tmp/pip-tmp
+
+# Configure Workspace
+ENV DBT_PROFILES_DIR=/workspace/dbt
