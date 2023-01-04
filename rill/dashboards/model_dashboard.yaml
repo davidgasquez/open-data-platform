@@ -1,0 +1,20 @@
+display_name: "dashboard"
+model: "model"
+timeseries: "timestamp"
+measures:
+    - label: Total records
+      expression: count(*)
+      description: Total number of records present
+      format_preset: humanize
+dimensions:
+    - label: Title
+      property: Title
+      description: ""
+    - label: URL
+      property: URL
+      description: ""
+    - label: Referer
+      property: Referer
+      description: ""
+    - label: FlashMinor2
+      property: FlashMinor2
