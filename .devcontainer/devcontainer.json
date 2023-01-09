@@ -9,7 +9,8 @@
                 "files.associations": {
                     "*.sql": "jinja-sql"
                 },
-                "dbt.profilesDirOverride": "/workspace/dbt/"
+                "python.pythonPath": "/usr/local/bin/python",
+                "dbt.profilesDirOverride": "/workspace/etl/"
             },
             "extensions": [
                 "ms-python.python",

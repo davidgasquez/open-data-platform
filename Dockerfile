@@ -12,4 +12,4 @@ RUN pip3 --disable-pip-version-check --no-cache-dir install \
     && rm -rf /tmp/pip-tmp
 
 # Configure Workspace
-ENV DBT_PROFILES_DIR=/workspace/dbt
+ENV DBT_PROFILES_DIR=/workspace/etl
