@@ -26,6 +26,11 @@
 *.a
 *.lib
 
+# Python module files
+*.pyc
+*.pyo
+*.egg-info
+
 # Executables
 *.exe
 *.out
