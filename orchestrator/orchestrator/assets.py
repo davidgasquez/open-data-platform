@@ -1,6 +1,7 @@
 """
 Basic assets for the orchestrator.
 """
+
 import pyarrow as pa
 from dagster import asset
 

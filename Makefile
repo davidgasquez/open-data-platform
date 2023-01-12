@@ -12,7 +12,7 @@ stop:
 .PHONY: minio
 minio:
 	@mc config host add mn http://minio:9020 minio minio123
-	@mc mb data
+	@mc mb mn/data
 
 .PHONY: data
 data:

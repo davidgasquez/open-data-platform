@@ -6,10 +6,10 @@ RUN apt-get update && apt-get -y install --no-install-recommends \
 # Install minio mc
 RUN wget https://dl.min.io/client/mc/release/linux-amd64/mc && chmod +x mc && mv mc /usr/local/bin
 
-# Install duckdb
-RUN pip3 --disable-pip-version-check --no-cache-dir install \
-    duckdb==0.6.1 dbt-duckdb==1.3.3 dbt-osmosis==0.9.8 dagster==1.1.7 dagit==1.1.7 \
+# Install Python packages
+COPY requirements.txt /tmp/pip-tmp/requirements.txt
+RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
     && rm -rf /tmp/pip-tmp
 
 # Configure Workspace
-ENV DBT_PROFILES_DIR=/workspace/etl
+ENV DBT_PROFILES_DIR=/workspace/modeling

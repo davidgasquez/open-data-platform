@@ -1,6 +1,9 @@
 {
     "name": "Playground",
-    "dockerComposeFile": "../docker-compose.yml",
+    "dockerComposeFile": [
+        "../docker-compose.yml",
+        "../docker-compose.airbyte.yml"
+    ],
     "service": "ubuntu",
     "workspaceFolder": "/workspace",
     "customizations": {
@@ -9,7 +12,7 @@
                 "files.associations": {
                     "*.sql": "jinja-sql"
                 },
-                "dbt.profilesDirOverride": "/workspace/etl/",
+                "dbt.profilesDirOverride": "/workspace/modeling/",
                 "python.pythonPath": "/usr/local/bin/python",
                 "python.analysis.typeCheckingMode": "basic"
             },
@@ -22,7 +25,8 @@
                 "innoverio.vscode-dbt-power-user",
                 "visualstudioexptteam.vscodeintellicode",
                 "bastienboutonnet.vscode-dbt",
-                "dorzey.vscode-sqlfluff"
+                "dorzey.vscode-sqlfluff",
+                "charliermarsh.ruff"
             ]
         }
     },
