@@ -1,8 +1,7 @@
 {
     "name": "Playground",
     "dockerComposeFile": [
-        "../docker-compose.yml",
-        "../docker-compose.airbyte.yml"
+        "../docker-compose.yml"
     ],
     "service": "ubuntu",
     "workspaceFolder": "/workspace",
@@ -32,8 +31,7 @@
     },
     "features": {
         "ghcr.io/stuartleeks/dev-container-features/shell-history:latest": {},
-        "ghcr.io/devcontainers/features/docker-from-docker:1": {},
-        // "ghcr.io/devcontainers/features/python:1": {}
+        "ghcr.io/devcontainers/features/docker-from-docker:1": {}
     },
     "remoteUser": "vscode"
 }
