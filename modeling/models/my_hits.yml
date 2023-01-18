@@ -8,7 +8,7 @@ sources:
           - name: hits
 
 models:
-    - name: hits
+    - name: my_hits
       description: "Random dataset"
       columns:
           - name: watch_id
