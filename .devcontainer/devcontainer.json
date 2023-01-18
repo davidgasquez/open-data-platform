@@ -11,7 +11,7 @@
                 "files.associations": {
                     "*.sql": "jinja-sql"
                 },
-                "dbt.profilesDirOverride": "/workspace/modeling/",
+                "dbt.profilesDirOverride": "/workspace/dbt/",
                 "python.pythonPath": "/usr/local/bin/python",
                 "python.analysis.typeCheckingMode": "basic"
             },
