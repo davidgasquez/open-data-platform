@@ -31,7 +31,7 @@
     },
     "features": {
         "ghcr.io/stuartleeks/dev-container-features/shell-history:latest": {},
-        "ghcr.io/devcontainers/features/docker-from-docker:1": {}
+        "ghcr.io/devcontainers/features/docker-in-docker:latest": {}
     },
     "postStartCommand": "pip install -e '.[dev]'",
     "remoteUser": "vscode"
