@@ -1,9 +1,9 @@
-dbt-osmosis
-duckdb
-dbt-duckdb
 dagster
 dagster-dbt
 dagster-docker
 dagster-duckdb
-dagster-duckdb-pandas
 dagit
+dagster-k8s
+duckdb
+dbt-duckdb
+dbt-osmosis
