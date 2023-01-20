@@ -7,13 +7,13 @@ default:
             extensions:
                 - httpfs
                 - parquet
-            external_root: s3://data
-            settings:
-                s3_endpoint: "minio:9020"
-                s3_access_key_id: minio
-                s3_secret_access_key: minio123
-                s3_url_style: path
-                s3_use_ssl: false
+            # external_root: s3://data
+            # settings:
+            #     s3_endpoint: "minio:9020"
+            #     s3_access_key_id: minio
+            #     s3_secret_access_key: minio123
+            #     s3_url_style: path
+            #     s3_use_ssl: false
     target: dev
 
 config:
