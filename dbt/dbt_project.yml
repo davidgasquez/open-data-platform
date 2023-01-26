@@ -1,4 +1,4 @@
-name: "modeling"
+name: "main"
 version: "1.0.0"
 config-version: 2
 
@@ -17,5 +17,5 @@ clean-targets:
     - "dbt_packages"
 
 models:
-    modeling:
+    main:
         +materialized: external

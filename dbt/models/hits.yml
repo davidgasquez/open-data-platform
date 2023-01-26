@@ -3,9 +3,9 @@ version: 2
 sources:
     - name: main
       meta:
-          external_location: "s3://data/{name}.parquet"
+          external_location: "../data/{name}.parquet"
       tables:
-          - name: hits
+          - name: raw_hits
 
 models:
     - name: hits
