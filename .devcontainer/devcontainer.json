@@ -25,7 +25,8 @@
                 "visualstudioexptteam.vscodeintellicode",
                 "bastienboutonnet.vscode-dbt",
                 "dorzey.vscode-sqlfluff",
-                "charliermarsh.ruff"
+                "charliermarsh.ruff",
+                "ms-vscode.makefile-tools"
             ]
         }
     },

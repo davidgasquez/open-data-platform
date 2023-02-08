@@ -1,4 +1,5 @@
 dagster
+dbt-core
 dagster-dbt
 dagster-docker
 dagster-duckdb
