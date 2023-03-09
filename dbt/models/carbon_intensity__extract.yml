@@ -1,0 +1,19 @@
+version: 2
+
+models:
+    - name: carbon_intensity__extract
+      description: |
+        Carbon intensity entries. This dataset is extracted into duckdb after which
+        the below tests are executed before being forwarded to the downstream SQL
+        models which materialize it in minio.
+      columns:
+          - name: id
+            tests:
+                - unique
+                - not_null
+          - name: forecast
+            description: Level of carbon
+          - name: index
+            tests:
+                - accepted_values:
+                    values: ["very low", "low", "moderate", "high", "very high"]
