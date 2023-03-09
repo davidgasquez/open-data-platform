@@ -1,0 +1,18 @@
+default:
+  load_path: raw
+  project_name: e8b8f4c7
+  taps:
+    tap-carbon-intensity:
+      capabilities:
+      - state
+      - catalog
+      config: {}
+      load_path: carbon_intensity
+      pip_url: git+https://gitlab.com/meltano/tap-carbon-intensity.git#egg=tap_carbon_intensity
+      select:
+      - '*.*'
+  targets:
+    target-jsonl:
+      config:
+        destination_path: '@format output/{this.load_path}'
+      pip_url: target-jsonl==0.1.4
