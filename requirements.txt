@@ -8,3 +8,5 @@ dagster-duckdb
 dagster-k8s
 dbt-duckdb
 dbt-osmosis
+singer-alto
+pyarrow
