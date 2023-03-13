@@ -1,10 +1,10 @@
+dagit
 dagster
 dbt-core
+duckdb
 dagster-dbt
 dagster-docker
 dagster-duckdb
-dagit
 dagster-k8s
-duckdb
 dbt-duckdb
 dbt-osmosis
