@@ -2,10 +2,15 @@ version: 2
 
 sources:
     - name: main
-      meta:
-          external_location: "s3://data/{name}.parquet"
       tables:
           - name: raw_hits
+            meta:
+                # To use a glob pattern with HTTPFS, make a Python model and use the ffspec library
+                external_location: >
+                    read_parquet([
+                        'https://datasets.clickhouse.com/hits_compatible/athena_partitioned/hits_1.parquet',
+                        'https://datasets.clickhouse.com/hits_compatible/athena_partitioned/hits_2.parquet'
+                    ])
 
 models:
     - name: hits

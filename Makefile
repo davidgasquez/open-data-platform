@@ -39,3 +39,4 @@ dev: up
 clean: stop
 	@sudo rm -rf data/*
 	@sudo rm -rf .minio/
+	@git clean -fdx

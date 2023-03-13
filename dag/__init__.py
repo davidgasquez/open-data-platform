@@ -3,8 +3,6 @@ from dagster import Definitions
 from dagster_dbt import dbt_cli_resource
 from dagster_dbt import load_assets_from_dbt_project
 
-from dag.dagster_hits import raw_hits
-
 DBT_PROJECT_DIR = "dbt/"
 
 dbt_resource = dbt_cli_resource.configured(
@@ -17,4 +15,4 @@ resources = {
     "dbt": dbt_resource,
 }
 
-defs = Definitions(assets=[*dbt_assets, raw_hits], resources=resources)
+defs = Definitions(assets=[*dbt_assets], resources=resources)
