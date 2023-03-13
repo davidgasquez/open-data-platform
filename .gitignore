@@ -41,3 +41,6 @@
 
 # Local data
 data/
+
+# Alto files
+.alto*

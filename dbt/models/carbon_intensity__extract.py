@@ -8,7 +8,10 @@ import duckdb
 
 def model(dbt, session: duckdb.DuckDBPyConnection):
     dbt.config(materialized="table")
+
+    # Get engine
     engine = alto.engine.get_engine("dev")
+
     # Setup pipeline
     tap, target, runtime_config = alto.engine.setup_tap_target(
         "tap-carbon-intensity",
@@ -17,14 +20,16 @@ def model(dbt, session: duckdb.DuckDBPyConnection):
         engine.configuration,
         engine.alto,  # type: ignore
     )
+
     # Run pipeline
-    shutil.rmtree(runtime_config[target.name]["destination_path"])
+    shutil.rmtree(runtime_config[target.name]["destination_path"], ignore_errors=True)
     alto.engine.run_pipeline(
         tap,
         target,
         str(uuid.uuid4()),
         engine.filesystem,
     )
+
     # Return data
     return session.read_json(
         os.path.join(runtime_config[target.name]["destination_path"], "entry-*.jsonl"),
